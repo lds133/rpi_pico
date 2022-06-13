@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+
+pico-ball8-project/build
+pico-ball8-project/.visualgdb
+pico-ball8-project/.vs
+*.user
