@@ -13,11 +13,19 @@
 
 #define SCR_BL_CHANGE_PERIOD_MS 15
 
+#if 1
 
 #define FONT font24cyr
 #define CARDS prophet_cards_ua
 #define CARDS_MAX prophet_cards_ua_size
 
-//#define FONT font24eng
-//#define CARDS prophet_cards_en
-//#define CARDS_MAX prophet_cards_en_size
+#else
+
+#define FONT font24eng
+#define CARDS prophet_cards_en
+#define CARDS_MAX prophet_cards_en_size
+
+
+#endif
+
+

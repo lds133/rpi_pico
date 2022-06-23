@@ -35,6 +35,8 @@ typedef struct {
 	
 	uint8_t random;
 	
+	bool isupsidedown;
+	
 } PHYOBJ;
 
 

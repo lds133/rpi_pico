@@ -192,7 +192,7 @@ void main_loop()
 	{
 		
 		
-		scr_backlight_loop();
+		//scr_backlight_loop();
 
 		uint16_t bgcolor = SCR_BLUE;
 
@@ -208,7 +208,8 @@ void main_loop()
 
 		img_clear_raw(s, SCR_BLACK);
 		
-		PHYOBJ* p = phy_get();		
+		PHYOBJ* p = phy_get();	
+		
 		int tr_r = 160;
 		int lim_r = 30;
 		x = ((p->y / p->rmax) * lim_r) + 120;
@@ -216,13 +217,12 @@ void main_loop()
 		a = -p->a;
 		img_triangle_ex(s, x, y, tr_r, (int)a, bgcolor);
 		
-		
-		
 		uint64_t t0 = MILLIS;
 		img_clear_raw(st, SCR_BLACK);
-		prp_draw(st, (int)a);
+		p->isupsidedown = prp_draw(st, (int)a);
 		img_stamp(s, x - 100, y - 100, st, SCR_WHITE);
 		uint64_t t1 = MILLIS;
+		
 		
 		if (isgoingtosleep)
 		{	if (!p->isdormant)

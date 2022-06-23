@@ -65,8 +65,8 @@ void phy_update(MPUDATA* d)
 	
 	if (dt != 0)
 	{	
-		p->vx += -d->ax / dt; 
-		p->vy += -d->ay / dt; 
+		p->vx += d->ax / dt; 
+		p->vy += d->ay / dt; 
 	
 		p->x += p->vx / dt;
 		p->y += p->vy / dt;

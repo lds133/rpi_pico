@@ -164,15 +164,18 @@ void prp_draw_dn(SPRITE* s, int angle_deg)
 }
 
 
-void prp_draw(SPRITE* s, int angle_deg)
+bool prp_draw(SPRITE* s, int angle_deg)
 {
-	if (_selectedcard->direction == UP)
-	{
-		return prp_draw_up(s, angle_deg);	
+	
+	bool isrotated = (_selectedcard->direction != UP);
+	if (isrotated)
+	{	prp_draw_dn(s, angle_deg);	
 	} else
-	{
-		return prp_draw_dn(s, angle_deg);	
+	{	prp_draw_up(s, angle_deg);	
 	}
+	
+
+	
 	
 }
 

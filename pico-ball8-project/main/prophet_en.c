@@ -1,6 +1,6 @@
 #include "prophet_card.h"
 
-
+#if 0
 FTCARD prophet_cards_en[] = { 
 
 	{ 2, DN, { "IT IS", "CERTAIN", "", "" } },
@@ -30,5 +30,17 @@ FTCARD prophet_cards_en[] = {
 	{ 1, UP, { "ERROR", "", "", "" } },	
 
 };
+
+#else
+FTCARD prophet_cards_en[] = { 
+
+	{ 3, UP, { "LEAVE", "ME", "ALONE", "" } },
+	{ 2, UP, { "STAY", "AWAY", "", "" } },
+	{ 2, UP, { "I AM", "BUSY", "", "" } },
+    { 2, DN, { "I HAVE", "NO IDEA", "", "" } },
+
+	{ 1, UP, { "ERROR", "", "", "" } },	
+};
+#endif
 
 const unsigned int prophet_cards_en_size = sizeof(prophet_cards_en) / sizeof(FTCARD);
